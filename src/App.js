@@ -5,6 +5,8 @@ import Offers from "./pages/Offers"
 import Profile from "./pages/Profile"
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import ForgetPassword from "./pages/ForgetPassword"
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
       <Navbar/>
 
       </Router>
+      <ToastContainer/>
     </>
   );
 }
