@@ -1,27 +1,27 @@
-import { useState } from "react";
-import {toast} from "react-toastify"
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import { toast } from 'react-toastify'
+import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
-import visibilityIcon from "../assets/svg/visibilityIcon.svg";
+import OAuth from '../components/OAuth'
+import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
+import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 
 function SignIn() {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+    email: '',
+    password: '',
+  })
+  const { email, password } = formData
 
-  const { email, password } = formData;
-
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
-    }));
-  };
+    }))
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -45,7 +45,7 @@ function SignIn() {
 
   return (
     <>
-       <div className='pageContainer'>
+      <div className='pageContainer'>
         <header>
           <p className='pageHeader'>Welcome Back!</p>
         </header>
@@ -90,14 +90,14 @@ function SignIn() {
           </div>
         </form>
 
-        {/* <OAuth /> */}
+        <OAuth />
 
         <Link to='/sign-up' className='registerLink'>
           Sign Up Instead
         </Link>
       </div>
     </>
-  );
+  )
 }
 
-export default SignIn;
+export default SignIn
