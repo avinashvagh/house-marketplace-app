@@ -8,7 +8,7 @@ import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import ForgetPassword from "./pages/ForgetPassword"
+import ForgotPassword from "./pages/ForgotPassword"
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           </Route>
           <Route path="/sign-in" element={<SignIn/>} />
           <Route path="/sign-up" element={<SignUp/>} />
-          <Route path="/forget-password" element={<ForgetPassword/>} />
+          <Route path="/forgot-password" element={<ForgotPassword/>} />
 
         </Routes>
       <Navbar/>
