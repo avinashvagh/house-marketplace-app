@@ -46,6 +46,10 @@ function CreateListing() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted]);
 
+  if(loading){
+    return <Spinner/>
+  }
+
   return <div>Create Listing</div>;
 }
 
